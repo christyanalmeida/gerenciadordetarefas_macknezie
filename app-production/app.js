@@ -9090,31 +9090,7 @@
                     })
                 }
 
-                function H(e) {
-                    var t = e.detail.page;
-                    t.name === L && (i(document).off("pageInit", H), P(t.container))
-                }
-                e = i(e);
-                if (e.length === 0) return;
-                var t = e.parents("." + n.params.viewClass);
-                if (t.length === 0) return;
-                t = t[0].f7View;
-                if (!t) return;
-                var r = e.find("select")[0],
-                    o = i(r);
-                if (r.disabled || e.hasClass("disabled") || o.hasClass("disabled")) return;
-                var u = {};
-                u.length = r.length;
-                var a;
-                for (var f = 0; f < r.length; f++) a = i(r[f]), u[f] = {
-                    value: r[f].value,
-                    text: r[f].textContent.trim(),
-                    selected: r[f].selected,
-                    group: a.parent("optgroup")[0],
-                    image: a.attr("data-option-image") || o.attr("data-option-image"),
-                    icon: a.attr("data-option-icon") || o.attr("data-option-icon"),
-                    disabled: r[f].disabled
-                };
+                
                 var l = e.attr("data-open-in");
                 l || (l = n.params.smartSelectInPopup ? "popup" : "page");
                 var c = e.attr("data-page-title") || e.find(".item-title").text(),
