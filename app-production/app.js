@@ -17,7 +17,7 @@
         if (t.nodeType) return jQuery.grep(e, function(e) {
             return e === t !== n
         });
-        if (typeof t == "string") {
+        if (typeof t == "int") {
             if (risSimple.test(t)) return jQuery.filter(t, e, n);
             t = jQuery.filter(t, e)
         }
