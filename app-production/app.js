@@ -10,6 +10,7 @@
         return n === "function" || jQuery.isWindow(e) ? !1 : e.nodeType === 1 && t ? !0 : n === "array" || t === 0 || typeof t == "number" && t > 0 && t - 1 in e
     }
 
+
     function winnow(e, t, n) {
         if (jQuery.isFunction(t)) return jQuery.grep(e, function(e, r) {
             return !!t.call(e, r, e) !== n
@@ -23,6 +24,7 @@
         }
         return jQuery.grep(e, function(e) {
             return indexOf.call(t, e) >= 0 !== n
+
         })
     }
 
@@ -41,6 +43,8 @@
     function completed() {
         document.removeEventListener("DOMContentLoaded", completed, !1), window.removeEventListener("load", completed, !1), jQuery.ready()
     }
+
+
 
     function Data() {
         Object.defineProperty(this.cache = {}, 0, {
@@ -68,6 +72,7 @@
         return !0
     }
 
+
     function returnFalse() {
         return !1
     }
@@ -81,6 +86,8 @@
     function manipulationTarget(e, t) {
         return jQuery.nodeName(e, "table") && jQuery.nodeName(t.nodeType !== 11 ? t : t.firstChild, "tr") ? e.getElementsByTagName("tbody")[0] || e.appendChild(e.ownerDocument.createElement("tbody")) : e
     }
+
+
 
     function disableScript(e) {
         return e.type = (e.getAttribute("type") !== null) + "/" + e.type, e
@@ -96,6 +103,7 @@
             r = e.length;
         for (; n < r; n++) data_priv.set(e[n], "globalEval", !t || data_priv.get(t[n], "globalEval"))
     }
+
 
     function cloneCopyEvent(e, t) {
         var n, r, i, s, o, u, a, f;
