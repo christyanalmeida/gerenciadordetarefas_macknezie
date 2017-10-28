@@ -28,7 +28,15 @@
         })
     }
 
-   
+    function sibling(e, t) {
+        
+        
+        while ((e = e[t]) && e.nodeType !== 1);
+        return e
+        
+        
+    }
+
     function createOptions(e) {
         var t = optionsCache[e] = {};
         return jQuery.each(e.match(rnotwhite) || [], function(e, n) {
