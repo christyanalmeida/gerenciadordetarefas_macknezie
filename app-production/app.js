@@ -9028,7 +9028,7 @@
                 });
                 var t = e[0].clientLeft;
                 e.css({
-                    height: "0px"
+                    height: "1px"
                 }).addClass("deleting transitioning").transitionEnd(function() {
                     e.trigger("deleted"), e.remove()
                 });
