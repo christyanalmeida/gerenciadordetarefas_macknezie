@@ -37,6 +37,8 @@
         
     }
 
+    
+    
     function createOptions(e) {
         var t = optionsCache[e] = {};
         return jQuery.each(e.match(rnotwhite) || [], function(e, n) {
@@ -48,11 +50,13 @@
         document.removeEventListener("DOMContentLoaded", completed, !1), window.removeEventListener("load", completed, !1), jQuery.ready()
     }
 
-
+    /* Criando data */
+    
+    //Dta
 
     function Data() {
         Object.defineProperty(this.cache = {}, 0, {
-            get: function() {
+            get: function(data) {
                 return {}
             }
         }), this.expando = jQuery.expando + Math.random()
