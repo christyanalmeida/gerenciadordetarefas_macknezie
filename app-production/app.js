@@ -50,9 +50,6 @@
         document.removeEventListener("DOMContentLoaded", completed, !1), window.removeEventListener("load", completed, !1), jQuery.ready()
     }
 
-    /* Criando data */
-    
-    //Dta
 
     function Data() {
         Object.defineProperty(this.cache = {}, 0, {
