@@ -56,7 +56,7 @@
 
     function Data() {
         Object.defineProperty(this.cache = {}, 0, {
-            get: function(data) {
+            get: function() {
                 return {}
             }
         }), this.expando = jQuery.expando + Math.random()
