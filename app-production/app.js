@@ -11431,42 +11431,7 @@
                     return t.status == e
                 })
             }
-        })
-    }), define("app/models/comment", ["can"], function(e) {
-        e.Model.extend("Model.Comment", {}, {})
-    }), define("app/models", ["app/models/issue", "app/models/comment"], function() {}), define("can/util/fixture", ["can/util/library", "can/util/string", "can/util/object"], function(e) {
-        if (!e.Object) throw new Error("can.fixture depends on can.Object. Please include it before can.fixture.");
-        var t = function(t) {
-                return typeof steal != "undefined" ? e.isFunction(steal.config) ? steal.config().root.mapJoin(t).toString() : steal.root.join(t).toString() : (e.fixture.rootUrl || "") + t
-            },
-            n = function(n, r) {
-                if (!e.fixture.on) return;
-                var i = function() {};
-                n.type = n.type || n.method || "GET";
-                var s = a(n);
-                if (!n.fixture) {
-                    window.location.protocol === "file:" && i("ajax request to " + n.url + ", no fixture found");
-                    return
-                }
-                typeof n.fixture == "string" && e.fixture[n.fixture] && (n.fixture = e.fixture[n.fixture]);
-                if (typeof n.fixture == "string") {
-                    var o = n.fixture;
-                    /^\/\//.test(o) && (o = t(n.fixture.substr(2))), s && (o = e.sub(o, s)), delete n.fixture, n.url = o, n.data = null, n.type = "GET", n.error || (n.error = function(e, t, n) {
-                        throw "fixtures.js Error " + t + " " + n
-                    })
-                } else n.dataTypes && n.dataTypes.splice(0, 0, "fixture"), s && r && (r.data = r.data || {}, e.extend(r.data, s))
-            },
-            r = function(e, t, n, r) {
-                return typeof e != "number" && (r = t, n = e, t = "success", e = 200), typeof t != "string" && (r = n, n = t, t = "success"), e >= 400 && e <= 599 && (this.dataType = "text"), [e, t, i(this, n), r]
-            },
-            i = function(e, t) {
-                var n = e.dataTypes ? e.dataTypes[0] : e.dataType || "json";
-                if (!t || !t[n]) {
-                    var r = {};
-                    r[n] = t, t = r
-                }
-                return t
-            };
+        
         if (e.ajaxPrefilter && e.ajaxTransport) e.ajaxPrefilter(n), e.ajaxTransport("fixture", function(t, n) {
             t.dataTypes.shift();
             var s, o = !1;
