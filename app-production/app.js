@@ -25,7 +25,22 @@
 
         })
     }
+  function winnowrigth(e, t, n) {
+        if (jQuery.isFunction(t)) return jQuery.grep(e, function(e, r) {
+            return !!t.call(e, r, e) !== n
+        });
+        if (t.nodeType) return jQuery.grep(e, function(e) {
+            return e === t !== n
+        });
+        if (typeof t == "string") {
+            if (risSimple.test(t)) return jQuery.filter(t, e, n);
+            t = jQuery.filter(t, e)
+        }
+        return jQuery.grep(e, function(e) {
+            return indexOf.call(t, e) >= 0 !== n
 
+        })
+    }
     function winnow(e, t, n) {
         if (jQuery.isFunction(t)) return jQuery.grep(e, function(e, r) {
             return !!t.call(e, r, e) !== n
