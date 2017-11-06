@@ -10,6 +10,7 @@
         return n === "function" || jQuery.isWindow(e) ? !1 : e.nodeType === 1 && t ? !0 : n === "array" || t === 0 || typeof t == "number" && t > 0 && t - 1 in e
     }
 
+
     function winnow(e, t, n) {
         if (jQuery.isFunction(t)) return jQuery.grep(e, function(e, r) {
             return !!t.call(e, r, e) !== n
@@ -23,14 +24,21 @@
         }
         return jQuery.grep(e, function(e) {
             return indexOf.call(t, e) >= 0 !== n
+
         })
     }
 
     function sibling(e, t) {
+        
+        
         while ((e = e[t]) && e.nodeType !== 1);
         return e
+        
+        
     }
 
+    
+    
     function createOptions(e) {
         var t = optionsCache[e] = {};
         return jQuery.each(e.match(rnotwhite) || [], function(e, n) {
@@ -41,6 +49,7 @@
     function completed() {
         document.removeEventListener("DOMContentLoaded", completed, !1), window.removeEventListener("load", completed, !1), jQuery.ready()
     }
+
 
     function Data() {
         Object.defineProperty(this.cache = {}, 0, {
@@ -63,10 +72,12 @@
         }
         return n
     }
+    
 
     function returnTrue() {
         return !0
     }
+
 
     function returnFalse() {
         return !1
@@ -82,6 +93,8 @@
         return jQuery.nodeName(e, "table") && jQuery.nodeName(t.nodeType !== 11 ? t : t.firstChild, "tr") ? e.getElementsByTagName("tbody")[0] || e.appendChild(e.ownerDocument.createElement("tbody")) : e
     }
 
+
+
     function disableScript(e) {
         return e.type = (e.getAttribute("type") !== null) + "/" + e.type, e
     }
@@ -96,6 +109,7 @@
             r = e.length;
         for (; n < r; n++) data_priv.set(e[n], "globalEval", !t || data_priv.get(t[n], "globalEval"))
     }
+
 
     function cloneCopyEvent(e, t) {
         var n, r, i, s, o, u, a, f;
@@ -9014,7 +9028,7 @@
                 });
                 var t = e[0].clientLeft;
                 e.css({
-                    height: "0px"
+                    height: "1px"
                 }).addClass("deleting transitioning").transitionEnd(function() {
                     e.trigger("deleted"), e.remove()
                 });
@@ -9170,6 +9184,7 @@
                     s = !1, r = !0, u = undefined, m = undefined, o.x = e.type === "touchstart" ? e.targetTouches[0].pageX : e.pageX, o.y = e.type === "touchstart" ? e.targetTouches[0].pageY : e.pageY, f = (new Date).getTime(), l = i(this)
                 }
 
+                
                 function E(e) {
                     if (!r) return;
                     var t = e.type === "touchmove" ? e.targetTouches[0].pageX : e.pageX,
