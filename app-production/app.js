@@ -9358,13 +9358,7 @@
                     }), e.prop("scrollHandlerSet", "yes")), !0)
                 }
 
-                function m() {
-                    c.addClass("active-state")
-                }
-
-                function g(e) {
-                    c.removeClass("active-state")
-                }
+               
 
                 function y(e) {
                     var t = "button checkbox file image radio submit input textarea".split(" ");
