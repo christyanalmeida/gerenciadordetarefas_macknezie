@@ -1,11 +1,4 @@
-
-app.js
-----------------
-/Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/jquery/dist/jquery.js
-/Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/canjs/amd/can/util/can.js
-/Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/canjs/amd/can/util/attr.js
-/Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/canjs/amd/can/event.js
-/Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/canjs/amd/can/util/array/each.js
+js
 /Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/canjs/amd/can/util/inserted.js
 /Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/canjs/amd/can/util/jquery.js
 /Users/perehnbom/git/canjs-framework7-issuetracker/bower_components/canjs/amd/can/util/library.js
