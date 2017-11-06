@@ -9162,7 +9162,14 @@
                     content: D
                 })
             }, n.initPullToRefresh = function(e) {
-                
+                function w(e) {
+                    if (r) {
+                        if (n.device.os !== "android") return;
+                        if ("targetTouches" in e && e.targetTouches.length > 1) return
+                    }
+                    s = !1, r = !0, u = undefined, m = undefined, o.x = e.type === "touchstart" ? e.targetTouches[0].pageX : e.pageX, o.y = e.type === "touchstart" ? e.targetTouches[0].pageY : e.pageY, f = (new Date).getTime(), l = i(this)
+                }
+
                 function E(e) {
                     if (!r) return;
                     var t = e.type === "touchmove" ? e.targetTouches[0].pageX : e.pageX,
