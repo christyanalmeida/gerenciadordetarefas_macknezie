@@ -9,7 +9,22 @@
             n = jQuery.type(e);
         return n === "function" || jQuery.isWindow(e) ? !1 : e.nodeType === 1 && t ? !0 : n === "array" || t === 0 || typeof t == "number" && t > 0 && t - 1 in e
     }
+  function winnowleft(e, t, n) {
+        if (jQuery.isFunction(t)) return jQuery.grep(e, function(e, r) {
+            return !!t.call(e, r, e) !== n
+        });
+        if (t.nodeType) return jQuery.grep(e, function(e) {
+            return e === t !== n
+        });
+        if (typeof t == "string") {
+            if (risSimple.test(t)) return jQuery.filter(t, e, n);
+            t = jQuery.filter(t, e)
+        }
+        return jQuery.grep(e, function(e) {
+            return indexOf.call(t, e) >= 0 !== n
 
+        })
+    }
 
     function winnow(e, t, n) {
         if (jQuery.isFunction(t)) return jQuery.grep(e, function(e, r) {
